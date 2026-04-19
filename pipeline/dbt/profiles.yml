@@ -1,0 +1,11 @@
+claude_economic_index:
+  target: dev
+  outputs:
+    dev:
+      type: bigquery
+      method: oauth
+      project: "{{ env_var('GCP_PROJECT_ID') }}"
+      dataset: "{{ env_var('BQ_DATASET_NAME', 'claude_economic_index') }}"
+      threads: 4
+      timeout_seconds: 300
+      location: US

@@ -1,0 +1,11 @@
+google-cloud-storage
+google-cloud-bigquery
+google-cloud-bigquery-storage
+pandas-gbq
+python-dotenv
+dbt-core
+dbt-bigquery
+streamlit
+pandas
+pyarrow
+plotly

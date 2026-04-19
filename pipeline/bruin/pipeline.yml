@@ -1,0 +1,19 @@
+name: claude_pipeline
+schedule: "0 0 * * *"
+tasks:
+  - name: upload_to_gcs
+    type: python
+    image: python:3.9
+    executable: "pipeline/scripts/upload_to_gcs.py"
+  - name: load_to_bq
+    type: python
+    image: python:3.9
+    executable: "pipeline/scripts/load_to_bq.py"
+    depends:
+      - upload_to_gcs
+  - name: dbt_transform
+    type: dbt
+    command: run
+    project_dir: "pipeline/dbt"
+    depends:
+      - load_to_bq

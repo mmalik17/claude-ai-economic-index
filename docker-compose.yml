@@ -1,0 +1,28 @@
+version: '3.8'
+
+services:
+  dashboard:
+    build: .
+    container_name: claude-aei-dashboard
+    ports:
+      - "8501:8501"
+    env_file:
+      - .env
+    volumes:
+      - ./zoomcamp-2026-privatekey.json:/app/credentials.json:ro
+    environment:
+      - GOOGLE_APPLICATION_CREDENTIALS=/app/credentials.json
+    restart: always
+
+  pipeline:
+    build: .
+    container_name: claude-aei-pipeline
+    env_file:
+      - .env
+    volumes:
+      - ./zoomcamp-2026-privatekey.json:/app/credentials.json:ro
+    environment:
+      - GOOGLE_APPLICATION_CREDENTIALS=/app/credentials.json
+    command: bruin run pipeline/bruin
+    # Set this to manual if you don't want the pipeline to run every time
+    # profiles: ["pipeline"]

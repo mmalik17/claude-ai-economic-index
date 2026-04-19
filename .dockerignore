@@ -1,0 +1,29 @@
+# Git
+.git
+.gitignore
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+env/
+venv/
+ENV/
+*.env
+.pytest_cache/
+
+# Project Specific
+dataset/
+*.json
+!zoomcamp-2026-privatekey.json
+*.csv
+*.xlsx
+.bruin/
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Docker
+Dockerfile
+docker-compose.yml
+.dockerignore

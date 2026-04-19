@@ -1,0 +1,23 @@
+name: 'claude_economic_index'
+version: '1.0.0'
+config-version: 2
+
+profile: 'claude_economic_index'
+
+model-paths: ["models"]
+analysis-paths: ["analyses"]
+test-paths: ["tests"]
+seed-paths: ["seeds"]
+macro-paths: ["macros"]
+snapshot-paths: ["snapshots"]
+
+clean-targets:
+  - "target"
+  - "dbt_packages"
+
+models:
+  claude_economic_index:
+    silver:
+      +materialized: view
+    gold:
+      +materialized: table

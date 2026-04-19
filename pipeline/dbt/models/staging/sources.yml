@@ -1,0 +1,16 @@
+version: 2
+
+sources:
+  - name: staging_raw
+    description: "The raw staging tables loaded directly from GCS"
+    database: "{{ env_var('GCP_PROJECT_ID', 'your-gcp-project-id') }}"
+    schema: "{{ env_var('BQ_DATASET_NAME', 'claude_economic_index') }}"
+    tables:
+      - name: aei_raw_claude_ai
+        description: "The massive unpivoted Claude AI Economic Index table"
+      - name: job_exposure
+      - name: task_penetration
+
+models:
+  - name: silver_aei
+    description: "Filters and casts the raw AEI table to contain only the facets and variables we need for the dashboard metrics, improving query efficiency."
