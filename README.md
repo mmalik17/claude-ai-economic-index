@@ -32,8 +32,8 @@ This repository contains an end-to-end data engineering pipeline and interactive
 ## Tech Stack 
 | Data Tools | Role | Function |
 |---|---|---|
-| **Google Cloud Storage** | **DataLake** | Stores raw CSV data as the landing zone (Bronze layer). |
-| **Google BigQuery** | **DataWarehouse** | Central storage and compute for analytical processing and dashboard queries. |
+| **Google Cloud Storage** | **Data Lake** | Stores raw CSV data as the landing zone (Bronze layer). |
+| **Google BigQuery** | **Data Warehouse** | Central storage and compute for analytical processing and dashboard queries. |
 | **Streamlit** | **Visualization** | Multi-page interactive UI for data exploration. |
 | **Docker Compose** | **Infrastructure** | Orchestrates the entire stack for one-click cross-platform deployment. |
 | **Bruin** | **Orchestration** | Manages the end-to-end pipeline (Source -> GCS -> BigQuery ). |
@@ -54,9 +54,9 @@ This repository contains an end-to-end data engineering pipeline and interactive
 │   │   └── pipeline.yml       # Orchestration DAG
 │   ├── dbt                    # Transformation layer
 │   └── scripts                # Ingestion & Utility scripts
-│     └── upload_to_gcs.py     # Script to load data from local to GCS
-│     └── load_to_bq.py        # Script to load data from GCS to BigQuery
-│     └── run_sql.py           # Script to execute SQL in Bigquery
+│       └── upload_to_gcs.py     # Script to load data from local to GCS
+│       └── load_to_bq.py        # Script to load data from GCS to BigQuery
+│       └── run_sql.py           # Script to execute SQL in Bigquery
 ├── Dockerfile                  # Container build config
 ├── docker-compose.yml          # Service orchestration
 ├── requirements.txt            # Python dependencies
