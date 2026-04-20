@@ -29,8 +29,8 @@ COPY . .
 # Initialize a git repository to satisfy Bruin's requirement for a git root
 RUN git init
 
-# Expose the port used by Streamlit
-EXPOSE 8501
+# Set default port for local usage (Cloud Run will override this automatically)
+ENV PORT=8501
 
-# Default command (can be overridden in docker-compose)
-CMD ["streamlit", "run", "dashboard/app.py"]
+# Run streamlit with the port defined by the environment variable
+CMD streamlit run dashboard/app.py --server.port $PORT --server.address 0.0.0.0
