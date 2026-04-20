@@ -108,6 +108,15 @@ The dashboard is accessible on port `8501` and features **three analytical pages
 2.  **Time & Productivity**: Horizontal grouped visualizations of "time saved" dividends across task types.
 3.  **Education & Skills**: Tabbed horizontal bar charts analyzing "Education Delta" leads and a searchable 3,000+ task data hub.
 
+### Dashboard Page 1
+<img width="1877" height="764" alt="dashboard-page-01" src="https://github.com/user-attachments/assets/3cc00df1-5e0d-447b-b01c-b699fc577bc5" />
+
+### Dashboard Page 2
+<img width="1887" height="759" alt="dashboard-page-02" src="https://github.com/user-attachments/assets/815e8bd8-943e-4b1b-b37f-81fb4d9df7f6" />
+
+### Dashboard Page 3
+<img width="1873" height="870" alt="dashboard-page-03-1" src="https://github.com/user-attachments/assets/701841cf-3927-4bec-982e-a6431748f9e1" />
+
 ---
 
 # Quick Start / How to Run Project
