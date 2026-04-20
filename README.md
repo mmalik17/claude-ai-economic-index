@@ -27,7 +27,7 @@ This repository contains an end-to-end data engineering pipeline and interactive
 # Architecture and Tech Stack
 
 ## Architecture Diagram 
-https://github.com/mmalik17/claude-ai-economic-index/blob/main/image/Data%20Pipeline%20Architecture.jpg
+[https://github.com/mmalik17/claude-ai-economic-index/blob/main/image/Data%20Pipeline%20Architecture.jpg](https://github.com/mmalik17/claude-ai-economic-index/blob/main/image/Data%20Pipeline%20Architecture.jpg?raw=true)
 
 
 ## Tech Stack Explanation
