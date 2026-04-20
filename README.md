@@ -62,7 +62,7 @@ This repository contains an end-to-end data engineering pipeline and interactive
 
 ## Data Source
 All files are located in the `/dataset` folder.
-- **Source**: Anthropic Economic Index (AEI) - Feb 2026 Release.
+- **Source**: Anthropic Economic Index (AEI) - Feb 2026 Release. Website link : https://www.anthropic.com/economic-index
 - **Key Columns**:
   - `geo_id`: ISO country or region code.
   - `usage_pct`: Percentage of global/regional AI conversations.
