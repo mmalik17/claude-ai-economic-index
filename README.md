@@ -29,15 +29,15 @@ This repository contains an end-to-end data engineering pipeline and interactive
 ## Architecture Diagram 
 <img width="1258" height="662" alt="Data Pipeline Architecture" src="https://github.com/mmalik17/claude-ai-economic-index/blob/main/image/Data%20Pipeline%20Architecture.jpg?raw=true" />
 
-## Tech Stack Explanation
-| Component | Tool | Function |
+## Tech Stack 
+| Data Tools | Role | Function |
 |---|---|---|
-| **Orchestration** | [Bruin](https://getbruin.com) | Manages the end-to-end pipeline (Ingestion -> GCS -> BigQuery -> dbt). |
-| **Transformation** | [dbt](https://getdbt.com) | SQL-based transformation for Silver (cleansing) and Gold (marts) layers. |
-| **Data Lake** | **Google Cloud Storage** | Stores raw CSV data as the landing zone (Bronze layer). |
-| **Data Warehouse**| **BigQuery** | Central storage and compute for analytical processing and dashboard queries. |
-| **Visualization** | **Streamlit** | Multi-page interactive UI for data exploration. |
-| **Infrastructure** | **Docker Compose** | Orchestrates the entire stack for one-click cross-platform deployment. |
+| **Google Cloud Storage** | **DataLake** | Stores raw CSV data as the landing zone (Bronze layer). |
+| **Google BigQuery** | **DataWarehouse** | Central storage and compute for analytical processing and dashboard queries. |
+| **Streamlit** | **Visualization** | Multi-page interactive UI for data exploration. |
+| **Docker Compose** | **Infrastructure** | Orchestrates the entire stack for one-click cross-platform deployment. |
+| **Bruin** | **Orchestration** | Manages the end-to-end pipeline (Source -> GCS -> BigQuery ). |
+| **dbt** | **Transformation** | SQL-based transformation for Silver (cleansing) and Gold (marts) layers. |
 
 ## Project Structure
 ```text
@@ -54,6 +54,9 @@ This repository contains an end-to-end data engineering pipeline and interactive
 │   │   └── pipeline.yml       # Orchestration DAG
 │   ├── dbt                    # Transformation layer
 │   └── scripts                # Ingestion & Utility scripts
+│     └── upload_to_gcs.py     # Script to load data from local to GCS
+│     └── load_to_bq.py        # Script to load data from GCS to BigQuery
+│     └── run_sql.py           # Script to execute SQL in Bigquery
 ├── Dockerfile                  # Container build config
 ├── docker-compose.yml          # Service orchestration
 ├── requirements.txt            # Python dependencies
