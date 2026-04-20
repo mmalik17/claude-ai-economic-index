@@ -26,7 +26,11 @@ This repository contains an end-to-end data engineering pipeline and interactive
 
 # Architecture and Tech Stack
 
-## Diagram architecture
+## Architecture Diagram 
+https://github.com/mmalik17/claude-ai-economic-index/blob/main/image/Data%20Pipeline%20Architecture.jpg
+
+
+## Tech Stack Explanation
 | Component | Tool | Function |
 |---|---|---|
 | **Orchestration** | [Bruin](https://getbruin.com) | Manages the end-to-end pipeline (Ingestion -> GCS -> BigQuery -> dbt). |
