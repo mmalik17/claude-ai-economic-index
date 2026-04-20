@@ -42,6 +42,8 @@ This repository contains an end-to-end data engineering pipeline and interactive
 ## Project Structure
 ```text
 .
+├── .streamlit
+│   └── config.toml             # Page styling for Streamlit Dashboard UI
 ├── dashboard
 │   └── app.py                  # Streamlit Dashboard UI
 ├── dataset
@@ -53,10 +55,13 @@ This repository contains an end-to-end data engineering pipeline and interactive
 │   ├── bruin
 │   │   └── pipeline.yml       # Orchestration DAG
 │   ├── dbt                    # Transformation layer
+│   │   └── models
+│   │   | └── dbt_project.yml    # dbt project configuration file
+│   │   | └── profiles.yml       # defining connection to bigquery
 │   └── scripts                # Ingestion & Utility scripts
-│       └── upload_to_gcs.py     # Script to load data from local to GCS
-│       └── load_to_bq.py        # Script to load data from GCS to BigQuery
-│       └── run_sql.py           # Script to execute SQL in Bigquery
+│       └── upload_to_gcs.py      # Script to load data from local to GCS
+│       └── load_to_bq.py         # Script to load data from GCS to BigQuery
+│       └── run_sql.py            # Script to execute SQL in Bigquery
 ├── Dockerfile                  # Container build config
 ├── docker-compose.yml          # Service orchestration
 ├── requirements.txt            # Python dependencies
