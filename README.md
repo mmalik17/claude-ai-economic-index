@@ -1,6 +1,6 @@
 # Claude AI Economic Index — Dashboard
 
-This repository contains an end-to-end data engineering pipeline and interactive dashboard visualizing **Claude AI's economic impact and usage patterns** across the global economy. The project leverages Anthropic's Economic Index (AEI) dataset (week of Feb 5–12, 2026).
+This repository contains an end-to-end data engineering pipeline and interactive dashboard visualizing **Claude AI's economic impact and usage patterns** across the global economy. The project leverages Anthropic's Economic Index (AEI) dataset (survey taken date: Feb 5–12, 2026).
 
 ---
 
