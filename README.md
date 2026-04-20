@@ -45,7 +45,7 @@ This repository contains an end-to-end data engineering pipeline and interactive
 ├── .streamlit
 │   └── config.toml             # Page styling for Streamlit Dashboard UI
 ├── dashboard
-│   └── app.py                  # Streamlit Dashboard UI
+│   └── app.py                  # Script to generate Streamlit Dashboard UI
 ├── dataset
 │   ├── aei_raw_claude_ai...csv # Main AEI usage dataset
 │   ├── job_exposure.csv       # Task-to-Job mapping
