@@ -19,7 +19,7 @@ This repository contains an end-to-end data engineering pipeline and interactive
 ## Important Files
 - `dashboard/app.py`: The Main Streamlit application serving the dashboard.
 - `pipeline/bruin/pipeline.yml`: The orchestration DAG defining the ingestion and transformation flow.
-- `pipeline/dbt/`: The transformation logic layer (Staging, Silver, and Gold models).
+- `pipeline/dbt/dbt_project.yml`: DBT config file to define the transformation layer (Staging, Silver, and Gold models).
 - `Dockerfile` & `docker-compose.yml`: Full containerization for reproducible deployment.
 
 ---
